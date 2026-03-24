@@ -120,4 +120,18 @@ public class Dog
             }
         }
     }
+
+    /**
+     * Question 12../
+     */
+    public  HashMap<String, Integer> getColorAmounts(){
+        HashMap<String,Integer> colorAmounts = new HashMap<>();
+        for(Dog d : pack){
+            String color = d.getcolor();
+            colorAmounts.putIfAbsent(color,0);
+            int amount = colorAmounts.get(color);
+            colorAmounts.put(color, amount + 1);
+        }
+        return colorAmounts;
+    }
 }
