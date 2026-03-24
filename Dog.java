@@ -132,6 +132,9 @@ public class Dog
             int amount = colorAmounts.get(color);
             colorAmounts.put(color, amount + 1);
         }
-        return colorAmounts;
+
+        for(String color: colorAmount.keySet()){
+            System.out.println(color + " : " + colorAmount.get(color));
     }
+         return colorAmounts;
 }
